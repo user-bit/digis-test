@@ -8,6 +8,24 @@ $(document).ready(function () {
         autoplayTimeout: 10000
     });
 
+    $(function () {
+        var pull = $('.xs-menu');
+        menu = $('ul.menu-list');
+        menuHeight = menu.height();
+        $(pull).on('click', function (e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
+
+    });
+    $(window).resize(function () {
+        var w = $(window).width();
+        if (w > 320 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+
+
     function Calendar2(id, year, month) {
         var Dlast = new Date(year,month+1,0).getDate(),
             D = new Date(year,month,Dlast),

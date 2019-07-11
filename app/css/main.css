@@ -19,7 +19,6 @@ html {
 body {
     margin: 0;
     width: 100%;
-    display: flex;
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
     color: #fffefe;
@@ -240,6 +239,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .info-block img {
     height: 145px;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -1060,4 +1060,7 @@ input[type='range']::-webkit-slider-thumb::before {
     left: -502px; /* this should be -2px - width */
     top: 8px; /* don't change this */
     background: #777;
+}
+.xs-menu {
+    display: none;
 }
