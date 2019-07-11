@@ -54,3 +54,7 @@ $(document).on('click', '.dropdown-block', function () {
    $(this).toggleClass('active-drop');
    $(this).parent().toggleClass('active-drop');
 });
+
+$(document).on('click', '.close', function () {
+   $(this).parent('.dangers-item').remove()
+});

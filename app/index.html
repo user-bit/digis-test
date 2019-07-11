@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/success/main.min.css">
 
 
+
 </head>
 <body>
 <main class="main">
@@ -166,6 +167,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-2">
                 <div id="accordion">
                     <div class="card">
@@ -245,7 +247,7 @@
                         </label>
                     </div>
                     <div class="item-switch">
-
+                        <input type="range" min="0" max="100" value="10" />
                     </div>
                 </div>
             </div>
@@ -253,56 +255,84 @@
     </div>
 
     <div class="container mt-30">
-        <div class="bottom-flex">
-            <div class="left-bottom">
-                <div class="drop-section">
-                    <div class="dropdown-block">
-                        <p>Dropdown Normal</p>
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <div class="bottom-flex">
+                <div class="left-bottom">
+                    <div class="drop-section">
+                        <div class="dropdown-block">
+                            <p>Dropdown Normal</p>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="drop-result">
+                            <ul>
+                                <li>Option One</li>
+                                <li>Option Two</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="drop-result">
-                        <ul>
-                            <li>Option One</li>
-                            <li>Option Two</li>
-                        </ul>
+                    <div class="drop-section active-drop">
+                        <div class="dropdown-block active-drop">
+                            <p>Dropdown Normal</p>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="drop-result">
+                            <ul>
+                                <li>Option One</li>
+                                <li>Option Two</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <div class="drop-section active-drop">
-                    <div class="dropdown-block active-drop">
-                        <p>Dropdown Normal</p>
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <div class="dangers-block">
+                    <div class="dangers-list">
+                        <div class="dangers-item dangers-green">
+                            <p>Congratulations! You have been successfully </p>
+                            <div class="close">
+                                <span>x</span>
+                            </div>
+                        </div>
+                        <div class="dangers-item dangers-blue">
+                            <p>Attention! I recommend you look at me </p>
+                            <div class="close">
+                                <span>x</span>
+                            </div>
+                        </div>
+                        <div class="dangers-item dangers-yellow">
+                            <p>Warning! A you sure you want to be this</p>
+                            <div class="close">
+                                <span>x</span>
+                            </div>
+                        </div>
+                        <div class="dangers-item dangers-red">
+                            <p>Ooops! Somethings gone wrong</p>
+                            <div class="close">
+                                <span>x</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="drop-result">
-                        <ul>
-                            <li>Option One</li>
-                            <li>Option Two</li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="feedback-form">
+                    <form class="feedback">
+                        <div class="form-div w-50-form">
+                            <input class="control-form" type="text" name="name" placeholder="Username">
+                        </div>
+                        <div class="form-div w-50-form">
+                            <input class="control-form" type="text" name="password" placeholder="Password">
+                        </div>
+                        <div class="form-div w-70-form">
+                            <input class="control-form error-form" type="text" name="password" placeholder="Please use correct email">
+                        </div>
+                        <div class="form-div w-30-form">
+                            <input class="control-form" type="text" name="active" placeholder="Active">
+                        </div>
+                        <div class="textarea-div">
+                            <textarea class="textarea-control" placeholder="Message" name="message" type="text"></textarea>
+                            <button type="submit" class="send-form">Login</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="dangers-block">
-                <div class="dangers-list">
-                    <div class="dangers-item dangers-green">
-                        <p>Congratulations! You have been successfully </p>
-                    </div>
-                    <div class="dangers-item dangers-blue">
-                        <p>Attention! I recommend you look at me </p>
-                    </div>
-                    <div class="dangers-item dangers-yellow">
-                        <p>Warning! A you sure you want to be this</p>
-                    </div>
-                    <div class="dangers-item dangers-red">
-                        <p>Ooops! Somethings gone wrong</p>
-                    </div>
-                </div>
-            </div>
-            <div class="feedback-form"></div>
-        </div>
-
-
-
     </div>
 
 </main>

@@ -17,22 +17,22 @@ html {
 }
 
 body {
+    margin: 0;
     width: 100%;
     display: flex;
-    height: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
     color: #fffefe;
     background-image: linear-gradient(to right top, #016158, #055a86, #053a74);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-attachment: fixed;
+    padding: 60px 0;
 }
 
 main.main {
     -ms-flex: 1 0 auto;
     -webkit-box-flex: 1;
     flex: 1 0 auto;
-    padding: 60px 0;
 }
 
 a, a:hover, a:focus {
@@ -815,7 +815,6 @@ input:checked + .slider:before {
 .drop-result {
     display: none;
     background: #fff;
-    position: relative;
     margin-top: 8px;
     position: absolute;
     width: 100%;
@@ -855,12 +854,210 @@ input:checked + .slider:before {
     background: #d8d6d6;
     margin: 18px;
     padding: 11px;
+    position: relative;
 }
 .dangers-item p {
     font-size: 11px;
 }
 .feedback-form {
-    background: #b2ae00;
+    background: #fff;
     width: 46%;
     margin-left: 30px;
+}
+.close {
+    position: absolute;
+    top: 7px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0px 0 2px 0;
+    right: 9px;
+    opacity: .7;
+}
+.dangers-green {
+    background: #DFF0D8;
+}
+.dangers-green:before {
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 100%;
+    background: #85B461;
+    left: 0;
+    top: 0;
+}
+.dangers-green p {
+    color: #89B766;
+}
+.dangers-green .close {
+    color: #89B766;
+    border: 1px solid #85B461;
+}
+.dangers-blue {
+    background: #D9EDF7;
+}
+.dangers-blue p {
+    color: #67BFD3;
+}
+.dangers-blue:before {
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 100%;
+    background: #67BFD3;
+    left: 0;
+    top: 0;
+}
+.dangers-blue .close {
+    color: #67BFD3;
+    border: 1px solid #67BFD3;
+}
+.dangers-yellow {
+    background: #FCF8E3;
+}
+.dangers-yellow p {
+    color: #F2C56F;
+}
+.dangers-yellow:before {
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 100%;
+    background: #F2C56F;
+    left: 0;
+    top: 0;
+}
+.dangers-yellow .close {
+    color: #F2C56F;
+    border: 1px solid #F2C56F;
+}
+.dangers-red {
+    background: #F2DEDE;
+}
+.dangers-red p {
+    color: #D18792;
+}
+.dangers-red:before {
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 100%;
+    background: #D18792;
+    left: 0;
+    top: 0;
+}
+.dangers-red .close {
+    color: #D18792;
+    border: 1px solid #D18792;
+}
+form.feedback {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-div {
+    margin-bottom: 20px;
+}
+.w-50-form {
+    width: 48%;
+}
+.w-70-form {
+    width: 68%;
+}
+.w-30-form {
+    width: 28%;
+}
+.textarea-div {
+    width: 100%;
+    position: relative;
+}
+input.control-form {
+    width: 100%;
+    border: 1px solid #EEEEEE;
+    background: #EEEEEE;
+    height: 38px;
+    padding-left: 15px;
+    color: #7d7d7d;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+textarea.textarea-control {
+    width: 100%;
+    border: 1px solid #EEEEEE;
+    background: #EEEEEE;
+    min-height: 60px;
+    padding-left: 15px;
+    color: #7d7d7d;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+button.send-form {
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    background: #00B2B2;
+    border: 1px solid #00B2B2;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 42px;
+    cursor: pointer;
+    transition: .3s;
+}
+button.send-form:hover {
+    background: #017f80;
+    border: 1px solid #017f80;
+}
+input.control-form.error-form {
+    background: #F2DEDE;
+    border: 1px solid #dc919c;
+
+}
+input.control-form.error-form::placeholder {
+    color: #dc919c;
+}
+
+
+
+
+input[type='range'] {
+    width: 210px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+    width: 200px;
+    height: 10px;
+    background: #AAA;
+}
+input[type='range']::-webkit-slider-thumb {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin-top: -10px;
+    background: steelblue;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+input[type='range']::-webkit-slider-thumb::before {
+    position: absolute;
+    content: '';
+    height: 10px; /* equal to height of runnable track */
+    width: 500px; /* make this bigger than the widest range input element */
+    left: -502px; /* this should be -2px - width */
+    top: 8px; /* don't change this */
+    background: #777;
 }
